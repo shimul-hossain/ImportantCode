@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home.index');
+
+Route::get('/post', [PostController::class, 'index'])->name('post.index');
+Route::post("/post/store", [PostController::class, 'store'])->name('post.store');
+
+Route::get('/tag', [TagController::class, 'index'])->name('tag.index');
+Route::post("/tag/store", [TagController::class, 'store'])->name('tag.store');
