@@ -44,6 +44,9 @@
                 <div class="form-group mb-3">
                   <label for="title">Title</label>
                   <input type="text" name="title" id="title" class="form-control" placeholder="Enter Title Here">
+                  @error('title')
+                      <span class="text-danger">{{ $message }}</span>
+                  @enderror
                 </div> 
                 <div class="form-group mb-3">
                   <label for="tag">Tags</label>
