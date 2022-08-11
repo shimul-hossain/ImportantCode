@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class {{ class }} extends Controller
+{
+    public function index(){
+        return "Hello Sir, This is from stub customization";
+    }
+}
