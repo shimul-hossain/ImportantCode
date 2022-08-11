@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,5 @@ Route::post("/post/store", [PostController::class, 'store'])->name('post.store')
 
 Route::get('/tag', [TagController::class, 'index'])->name('tag.index');
 Route::post("/tag/store", [TagController::class, 'store'])->name('tag.store');
+Route::get('httptest', [ApiController::class, 'httptest'])->name('httptest');
+Route::post('user/login', [ApiController::class, 'userLogin'])->name('user.login');
